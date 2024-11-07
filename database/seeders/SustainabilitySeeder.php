@@ -14,14 +14,14 @@ class SustainabilitySeeder extends Seeder
      */
     public function run(): void
     {
-        Duurzaamheid::create([
+        Sustainability::create([
             'label_name' => 'EcoLabel',
             'eco_score' => 'A',
             'bio_certified' => true,
             'animal_friendly_score' => 'B',
         ]);
 
-        Duurzaamheid::create([
+        Sustainability::create([
             'label_name' => 'GreenSeal',
             'eco_score' => 'B',
             'bio_certified' => false,

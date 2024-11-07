@@ -4,7 +4,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Categorie;
+use App\Models\Category;
 
 class CategorieSeeder extends Seeder
 {
@@ -13,8 +13,8 @@ class CategorieSeeder extends Seeder
      */
     public function run(): void
     {
-        Categorie::create(['name' => 'Categorie 1']);
-        Categorie::create(['name' => 'Categorie 2']);
+        Category::create(['name' => 'Categorie 1']);
+        Category::create(['name' => 'Categorie 2']);
         // Add more sample categories as needed
     }
 }
