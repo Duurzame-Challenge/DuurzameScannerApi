@@ -5,6 +5,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Product;
+use App\Models\Alternative;
+use App\Models\Sustainability;
+use App\Models\Allergen;
+use App\Models\Order;
 
 class ProductSeeder extends Seeder
 {
@@ -147,7 +151,6 @@ class ProductSeeder extends Seeder
                 'brand_id' => 37, // Doritos
                 'user_id' => 1,
             ],
-            // Add more products as needed
         ];
 
         // Add more products to reach a total of 50
@@ -163,8 +166,24 @@ class ProductSeeder extends Seeder
             ];
         }
 
-        foreach ($products as $product) {
-            Product::create($product);
+        foreach ($products as $productData) {
+            $product = Product::create($productData);
+
+            // Associate alternatives with random products
+            $alternatives = Alternative::inRandomOrder()->take(rand(1, 3))->pluck('id');
+            $product->alternatives()->attach($alternatives);
+
+            // Associate sustainabilities with random products
+            $sustainabilities = Sustainability::inRandomOrder()->take(rand(1, 3))->pluck('id');
+            $product->sustainabilities()->attach($sustainabilities);
+
+            // Associate allergens with random products
+            $allergens = Allergen::inRandomOrder()->take(rand(1, 3))->pluck('id');
+            $product->allergens()->attach($allergens);
+
+            // Associate orders with random products
+            $orders = Order::inRandomOrder()->take(rand(1, 3))->pluck('id');
+            $product->orders()->attach($orders);
         }
     }
 }

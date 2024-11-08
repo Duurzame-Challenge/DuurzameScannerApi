@@ -16,7 +16,7 @@ class ProductController extends Controller
             'user',
             'categorie',
             'brand',
-            'sustainbilities',
+            'sustainabilities',
             'allergens',
             'alternatives',
             'orders'

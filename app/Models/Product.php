@@ -24,7 +24,7 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
 
-    public function sustainbilities()
+    public function sustainabilities()
     {
         return $this->belongsToMany(Sustainability::class, 'product_sustainability');
     }
@@ -36,11 +36,11 @@ class Product extends Model
 
     public function alternatives()
     {
-        return $this->hasMany(Alternative::class, 'product_id');
+        return $this->belongsToMany(Alternative::class, 'product_alternative');
     }
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class)->withPivot('quantity')->withTimestamps();
+        return $this->belongsToMany(Order::class, 'product_order');
     }
 }
