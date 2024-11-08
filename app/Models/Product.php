@@ -16,27 +16,27 @@ class Product extends Model
 
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->belongsTo(Category::class);
     }
 
-    public function merk()
+    public function brand()
     {
-        return $this->belongsTo(Merk::class);
+        return $this->belongsTo(Brand::class);
     }
 
-    public function duurzaamheden()
+    public function sustainbilities()
     {
-        return $this->belongsToMany(Duurzaamheid::class, 'product_sustainability');
+        return $this->belongsToMany(Sustainability::class, 'product_sustainability');
     }
 
-    public function allergenen()
+    public function allergens()
     {
-        return $this->belongsToMany(Allergenen::class, 'product_allergen');
+        return $this->belongsToMany(Allergen::class, 'product_allergen');
     }
 
-    public function alternatieven()
+    public function alternatives()
     {
-        return $this->hasMany(Alternatief::class, 'product_id');
+        return $this->hasMany(Alternative::class, 'product_id');
     }
 
     public function orders()

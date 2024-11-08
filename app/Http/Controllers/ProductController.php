@@ -2,14 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use App\Models\Allergen;
+use App\Models\Alternative;
+use App\Models\Sustainability;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $products = Product::with([
+            'user',
+            'categorie',
+            'brand',
+            'sustainbilities',
+            'allergens',
+            'alternatives',
+            'orders'
+        ])->get();
+
         return response()->json($products);
     }
 }
