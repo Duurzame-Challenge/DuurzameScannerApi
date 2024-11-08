@@ -125,6 +125,12 @@ class ProductController extends Controller
                 $order->products()->attach($productsOrder->product_id);
             }
 
+            // Concatenate product names
+            $productNames = $productsOrders->pluck('name')->implode(', ');
+
+            // Update the order with the concatenated product names
+            $order->update(['product_names' => $productNames]);
+
             // Discard all data from the products_order table
             ProductsOrder::truncate();
 
