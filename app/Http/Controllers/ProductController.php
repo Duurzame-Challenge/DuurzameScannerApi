@@ -79,4 +79,16 @@ class ProductController extends Controller
             return response()->json(['message' => 'Product not found'], 404);
         }
     }
+
+    public function getProductsOrders()
+    {
+        $productsOrders = ProductsOrder::with([
+            'product',
+            'categorie',
+            'brand',
+            'user'
+        ])->get();
+
+        return response()->json($productsOrders);
+    }
 }
