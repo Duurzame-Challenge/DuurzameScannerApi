@@ -11,8 +11,9 @@ class CreateProductsOrdersTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('products_orders', function (Blueprint $table) {
-            $table->id();
+        Schema::create('product_order', function (Blueprint $table) {
+            $table->id('order_id');
+
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->string('barcode');
             $table->string('name');
