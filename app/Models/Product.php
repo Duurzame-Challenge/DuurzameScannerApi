@@ -9,6 +9,16 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'barcode',
+        'name',
+        'description',
+        'price',
+        'categorie_id',
+        'brand_id',
+        'user_id',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -41,6 +51,6 @@ class Product extends Model
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class, 'product_order');
+        return $this->belongsToMany(Order::class, 'order_product');
     }
 }

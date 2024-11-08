@@ -15,13 +15,13 @@ class CreateProductsOrdersTable extends Migration
             $table->id('order_id');
 
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->string('barcode');
-            $table->string('name');
+            $table->string('barcode')->nullable();
+            $table->string('name')->nullable();
             $table->text('description')->nullable();
-            $table->decimal('price', 8, 2);
-            $table->foreignId('categorie_id')->constrained('categories')->onDelete('cascade');
-            $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->decimal('price', 8, 2)->nullable();
+            $table->foreignId('categorie_id')->constrained('categories')->onDelete('cascade')->nullable();
+            $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade')->nullable();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }
