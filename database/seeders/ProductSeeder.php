@@ -154,7 +154,7 @@ class ProductSeeder extends Seeder
         ];
 
         // Add more products to reach a total of 50
-        for ($i = 15; $i <= 50; $i++) {
+        for ($i = 38; $i <= 50; $i++) {
             $products[] = [
                 'barcode' => '87184520500' . $i,
                 'name' => 'Sample Product ' . $i,

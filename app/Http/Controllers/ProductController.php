@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Models\Allergen;
-use App\Models\Alternative;
-use App\Models\Sustainability;
 
 class ProductController extends Controller
 {
@@ -23,5 +20,50 @@ class ProductController extends Controller
         ])->get();
 
         return response()->json($products);
+    }
+
+    // show
+    public function show($id)
+    {
+        $product = Product::with([
+            'user',
+            'categorie',
+            'brand',
+            'sustainabilities',
+            'allergens',
+            'alternatives',
+            'orders'
+        ])->find($id);
+
+        if ($product) {
+            return response()->json($product);
+        } else {
+            return response()->json(['message' => 'Product not found'], 404);
+        }
+    }
+
+
+    public function getProductByBarcode(Request $request)
+    {
+        $request->validate([
+            'barcode' => 'required|string',
+        ]);
+
+        $barcode = $request->input('barcode');
+        $product = Product::with([
+            'user',
+            'categorie',
+            'brand',
+            'sustainabilities',
+            'allergens',
+            'alternatives',
+            'orders'
+        ])->where('barcode', $barcode)->first();
+
+        if ($product) {
+            return response()->json($product);
+        } else {
+            return response()->json(['message' => 'Product not found'], 404);
+        }
     }
 }
