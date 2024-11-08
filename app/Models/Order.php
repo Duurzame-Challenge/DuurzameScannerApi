@@ -24,4 +24,10 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // Accessor to get concatenated product names
+    public function getProductNamesAttribute()
+    {
+        return $this->products->pluck('name')->implode(', ');
+    }
 }

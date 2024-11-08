@@ -96,6 +96,7 @@ class ProductController extends Controller
     }
 
 
+
     public function finalizeOrder(Request $request)
     {
         try {
@@ -127,7 +128,10 @@ class ProductController extends Controller
             // Discard all data from the products_order table
             ProductsOrder::truncate();
 
-            return response()->json(['message' => 'Order finalized successfully', 'order' => $order]);
+            // Reload the order to include the products relationship
+            $order->load('products');
+
+            return response()->json(['message' => 'Order finalized successfully', 'order' => $order, 'product_names' => $order->product_names]);
         } catch (\Exception $e) {
             return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
         }
