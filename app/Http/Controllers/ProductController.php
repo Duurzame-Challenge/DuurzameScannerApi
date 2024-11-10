@@ -88,6 +88,9 @@ class ProductController extends Controller
         $productsOrders = ProductsOrder::with([
             'product',
             'categorie',
+            'sustainabilities',
+            'allergens',
+            'alternatives',
             'brand',
             'user'
         ])->get();
