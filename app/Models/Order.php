@@ -27,6 +27,12 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
 
+    // sustains
+    public function sustainabilities()
+    {
+        return $this->belongsToMany(Sustainability::class);
+    }
+
     // Accessor to get concatenated product names
     public function getProductNamesAttribute()
     {

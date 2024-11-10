@@ -37,6 +37,11 @@ class ProductsOrder extends Model
         return $this->belongsTo(Brand::class);
     }
 
+    public function sustainabilities()
+    {
+        return $this->belongsToMany(Sustainability::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
