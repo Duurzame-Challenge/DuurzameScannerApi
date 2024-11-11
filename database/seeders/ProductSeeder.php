@@ -167,23 +167,7 @@ class ProductSeeder extends Seeder
         }
 
         foreach ($products as $productData) {
-            $product = Product::create($productData);
-
-            // Associate alternatives with random products
-            $alternatives = Alternative::inRandomOrder()->take(rand(1, 3))->pluck('id');
-            $product->alternatives()->attach($alternatives);
-
-            // Associate sustainabilities with random products
-            $sustainabilities = Sustainability::inRandomOrder()->take(rand(1, 3))->pluck('id');
-            $product->sustainabilities()->attach($sustainabilities);
-
-            // Associate allergens with random products
-            $allergens = Allergen::inRandomOrder()->take(rand(1, 3))->pluck('id');
-            $product->allergens()->attach($allergens);
-
-            // Associate orders with random products
-            $orders = Order::inRandomOrder()->take(rand(1, 3))->pluck('id');
-            $product->orders()->attach($orders);
+            Product::create($productData);
         }
     }
 }

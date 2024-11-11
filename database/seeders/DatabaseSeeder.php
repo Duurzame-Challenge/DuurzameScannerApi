@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             SustainabilitySeeder::class,
             AllergenSeeder::class,
             AlternativeSeeder::class,
+            ProductAtach::class,
         ]);
     }
 }
