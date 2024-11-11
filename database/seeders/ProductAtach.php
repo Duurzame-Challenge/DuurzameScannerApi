@@ -44,7 +44,7 @@ class ProductAtach extends Seeder
                     $product->orders()->attach($orderId);
                 }
             }
-
+            // test
             // Attach random alternatives, avoiding duplicates
             $alternatives = Alternative::inRandomOrder()->take(rand(1, 3))->pluck('id');
             foreach ($alternatives as $alternativeId) {
