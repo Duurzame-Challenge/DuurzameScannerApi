@@ -153,19 +153,6 @@ class ProductSeeder extends Seeder
             ],
         ];
 
-        // Add more products to reach a total of 50
-        for ($i = 38; $i <= 50; $i++) {
-            $products[] = [
-                'barcode' => '87184520500' . $i,
-                'name' => 'Sample Product ' . $i,
-                'description' => 'This is a sample product.',
-                'price' => rand(1, 20) + 0.99,
-                'categorie_id' => rand(1, 17),
-                'brand_id' => rand(1, 37),
-                'user_id' => 1,
-            ];
-        }
-
         foreach ($products as $productData) {
             Product::create($productData);
         }

@@ -15,7 +15,7 @@ class ProductAtach extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         $products = Product::all();
 
@@ -24,7 +24,7 @@ class ProductAtach extends Seeder
             $sustainabilities = Sustainability::inRandomOrder()->take(rand(1, 3))->pluck('id');
             foreach ($sustainabilities as $sustainabilityId) {
                 // Check if the relationship already exists before attaching
-                if (!$product->sustainabilities()->where('sustainability_id', $sustainabilityId)->exists()) {
+                if (!$product->sustainabilities()->wherePivot('sustainability_id', $sustainabilityId)->exists()) {
                     $product->sustainabilities()->attach($sustainabilityId);
                 }
             }
@@ -32,7 +32,7 @@ class ProductAtach extends Seeder
             // Attach random allergens, avoiding duplicates
             $allergens = Allergen::inRandomOrder()->take(rand(1, 3))->pluck('id');
             foreach ($allergens as $allergenId) {
-                if (!$product->allergens()->where('allergen_id', $allergenId)->exists()) {
+                if (!$product->allergens()->wherePivot('allergen_id', $allergenId)->exists()) {
                     $product->allergens()->attach($allergenId);
                 }
             }
@@ -40,15 +40,15 @@ class ProductAtach extends Seeder
             // Attach random orders, avoiding duplicates
             $orders = Order::inRandomOrder()->take(rand(1, 3))->pluck('id');
             foreach ($orders as $orderId) {
-                if (!$product->orders()->where('order_id', $orderId)->exists()) {
+                if (!$product->orders()->wherePivot('order_id', $orderId)->exists()) {
                     $product->orders()->attach($orderId);
                 }
             }
-            // test
+
             // Attach random alternatives, avoiding duplicates
             $alternatives = Alternative::inRandomOrder()->take(rand(1, 3))->pluck('id');
             foreach ($alternatives as $alternativeId) {
-                if (!$product->alternatives()->where('alternative_id', $alternativeId)->exists()) {
+                if (!$product->alternatives()->wherePivot('alternative_id', $alternativeId)->exists()) {
                     $product->alternatives()->attach($alternativeId);
                 }
             }
