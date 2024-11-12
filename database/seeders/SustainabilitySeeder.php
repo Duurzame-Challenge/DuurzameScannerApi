@@ -48,6 +48,7 @@ class SustainabilitySeeder extends Seeder
                 'bio_certified' => true,
                 'animal_friendly_score' => '4',
             ],
+            // test
             [
                 'label_name' => 'EKO',
                 'eco_score' => 'A',
