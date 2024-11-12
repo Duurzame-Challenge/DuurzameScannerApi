@@ -17,13 +17,13 @@ class ProductSeeder extends Seeder
             // Groenten
             [
                 'barcode' => '8718452050013',
-                'name' => 'AH Spinazie',
-                'description' => 'Verse spinazie van Albert Heijn.',
-                'price' => 1.99,
-                'categorie_id' => 6, // Bladgroenten
+                'name' => 'AH Runder Hamburger 2 stuks',
+                'description' => 'Hamburgers gemaakt van mild gekruid rundvlees met een rulle structuur.',
+                'price' => 3.19,
+                'categorie_id' => 1, // Bladgroenten
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 1
             [
                 'barcode' => '8718452050020',
                 'name' => 'Hak Bloemkool',
@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 7, // Koolsoorten
                 'brand_id' => 7, // Hak
                 'user_id' => 1,
-            ],
+            ], // ID: 2
             [
                 'barcode' => '8718452050181',
                 'name' => 'AH Broccoli',
@@ -41,7 +41,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 7, // Koolsoorten
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 3
             [
                 'barcode' => '8718452050198',
                 'name' => 'AH Wortelen',
@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 6, // Bladgroenten
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 4
             // Vlees
             [
                 'barcode' => '8718452050037',
@@ -60,7 +60,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 1, // Rundvlees
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 5
             [
                 'barcode' => '8717163690012',
                 'name' => 'Jumbo Kipfilet',
@@ -69,7 +69,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 2, // Kip
                 'brand_id' => 2, // Jumbo
                 'user_id' => 1,
-            ],
+            ], // ID: 6
             [
                 'barcode' => '8718452050204',
                 'name' => 'AH Gehakt',
@@ -78,7 +78,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 1, // Rundvlees
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 7
             [
                 'barcode' => '8718452050211',
                 'name' => 'AH Biefstuk',
@@ -87,7 +87,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 1, // Rundvlees
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 8
             // Vis
             [
                 'barcode' => '8718452050044',
@@ -97,7 +97,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 3, // Vis
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 9
             [
                 'barcode' => '8718452050051',
                 'name' => 'AH Zalmfilet',
@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 3, // Vis
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 10
             [
                 'barcode' => '8718452050228',
                 'name' => 'AH Kabeljauwfilet',
@@ -115,7 +115,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 3, // Vis
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 11
             [
                 'barcode' => '8718452050235',
                 'name' => 'AH Tonijnsteak',
@@ -124,7 +124,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 3, // Vis
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 12
             // Varken
             [
                 'barcode' => '8718452050068',
@@ -134,7 +134,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 4, // Varkensvlees
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 13
             [
                 'barcode' => '8718452050075',
                 'name' => 'AH Speklapjes',
@@ -143,7 +143,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 4, // Varkensvlees
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 14
             [
                 'barcode' => '8718452050242',
                 'name' => 'AH Varkensfilet',
@@ -152,7 +152,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 4, // Varkensvlees
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 15
             [
                 'barcode' => '8718452050259',
                 'name' => 'AH Varkensribbetjes',
@@ -161,7 +161,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 4, // Varkensvlees
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 16
             // Snoep
             [
                 'barcode' => '8718452050082',
@@ -171,7 +171,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 17, // Snoep en Snacks
                 'brand_id' => 8, // Haribo
                 'user_id' => 1,
-            ],
+            ], // ID: 17
             [
                 'barcode' => '8718452050099',
                 'name' => 'M&M\'s',
@@ -180,7 +180,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 17, // Snoep en Snacks
                 'brand_id' => 9, // M&M's
                 'user_id' => 1,
-            ],
+            ], // ID: 18
             [
                 'barcode' => '8718452050266',
                 'name' => 'AH Drop',
@@ -189,7 +189,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 17, // Snoep en Snacks
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 19
             [
                 'barcode' => '8718452050273',
                 'name' => 'AH Chocolade',
@@ -198,7 +198,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 17, // Snoep en Snacks
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
-            ],
+            ], // ID: 20
             // Soepen
             [
                 'barcode' => '8718452050105',
@@ -208,7 +208,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 18, // Soepen
                 'brand_id' => 10, // Unox
                 'user_id' => 1,
-            ],
+            ], // ID: 21
             [
                 'barcode' => '8718452050112',
                 'name' => 'Unox Groentesoep',
@@ -217,7 +217,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 18, // Soepen
                 'brand_id' => 10,
                 'user_id' => 1,
-            ],
+            ], // ID: 22
             [
                 'barcode' => '8718452050280',
                 'name' => 'AH Kippensoep',
@@ -226,7 +226,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 18, // Soepen
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 23
             [
                 'barcode' => '8718452050297',
                 'name' => 'AH Erwtensoep',
@@ -235,7 +235,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 18, // Soepen
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 24
             // Alternatieve Producten
             [
                 'barcode' => '8718452050129',
@@ -245,7 +245,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 6, // Bladgroenten
                 'brand_id' => 1,
                 'user_id' => 1,
-            ],
+            ], // ID: 25
             [
                 'barcode' => '8718452050136',
                 'name' => 'Vega Kipfilet',
@@ -254,7 +254,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 2, // Kip
                 'brand_id' => 12, // VegaMerk
                 'user_id' => 1,
-            ],
+            ], // ID: 26
             [
                 'barcode' => '8718452050143',
                 'name' => 'Eco Zalmfilet',
@@ -263,7 +263,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 3, // Vis
                 'brand_id' => 13, // EcoMerk
                 'user_id' => 1,
-            ],
+            ], // ID: 27
             [
                 'barcode' => '8718452050150',
                 'name' => 'Diervriendelijke Varkenshaas',
@@ -272,7 +272,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 4, // Varkensvlees
                 'brand_id' => 14, // DiervriendelijkMerk
                 'user_id' => 1,
-            ],
+            ], // ID: 28
             [
                 'barcode' => '8718452050167',
                 'name' => 'Veganistische Gummy Bears',
@@ -281,7 +281,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 17, // Snoep en Snacks
                 'brand_id' => 15, // VeganMerk
                 'user_id' => 1,
-            ],
+            ], // ID: 29
             [
                 'barcode' => '8718452050174',
                 'name' => 'Biologische Tomatensoep',
@@ -290,7 +290,7 @@ class ProductSeeder extends Seeder
                 'categorie_id' => 18, // Soepen
                 'brand_id' => 16, // BioSoepMerk
                 'user_id' => 1,
-            ],
+            ], // ID: 30
         ];
 
         foreach ($products as $productData) {
