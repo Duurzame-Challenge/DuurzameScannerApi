@@ -16,3 +16,9 @@ Route::post('/finalize-order', [ProductController::class, 'finalizeOrder']);
 
 Route::get('/orders', [ProductController::class, 'getAllOrders']);
 Route::get('/order/{id}', [ProductController::class, 'getOrderById']);
+
+
+// New routes to get specific relationships
+Route::get('/product/{id}/sustainabilities', [ProductController::class, 'getSustainabilities']);
+Route::get('/product/{id}/allergens', [ProductController::class, 'getAllergens']);
+Route::get('/product/{id}/alternatives', [ProductController::class, 'getAlternatives']);

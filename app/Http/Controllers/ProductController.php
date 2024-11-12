@@ -161,4 +161,49 @@ class ProductController extends Controller
             return response()->json(['message' => 'Order not found'], 404);
         }
     }
+
+    // New function to get sustainabilities for a specific product
+    public function getSustainabilities($id)
+    {
+        try {
+            $product = Product::with('sustainabilities')->find($id);
+            if ($product) {
+                return response()->json($product->sustainabilities);
+            } else {
+                return response()->json(['message' => 'Product not found'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
+        }
+    }
+
+    // New function to get allergens for a specific product
+    public function getAllergens($id)
+    {
+        try {
+            $product = Product::with('allergens')->find($id);
+            if ($product) {
+                return response()->json($product->allergens);
+            } else {
+                return response()->json(['message' => 'Product not found'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
+        }
+    }
+
+    // New function to get alternatives for a specific product
+    public function getAlternatives($id)
+    {
+        try {
+            $product = Product::with('alternatives')->find($id);
+            if ($product) {
+                return response()->json($product->alternatives);
+            } else {
+                return response()->json(['message' => 'Product not found'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
+        }
+    }
 }
