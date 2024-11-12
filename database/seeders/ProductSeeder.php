@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050198',
                 'name' => 'Jazz appels schaal',
                 'description' => 'Zo’n knapperige, friszoete, sappige appel - dat kan alleen een JAZZ™ appel zijn!',
-                'price' => 3,59,
+                'price' => 3.59,
                 'categorie_id' => 13, 
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050037',
                 'name' => 'AH Biologisch Royal gala schaal',
                 'description' => 'Royal Gala is een volzoete handappel met een toegankelijke smaak met tonen van nectarine, een echte allemansvriend en biologisch bovendien!',
-                'price' => 2,69,
+                'price' => 2.69,
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -82,7 +82,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050211',
                 'name' => 'AH Franse scharrelkipfilet',
                 'description' => 'De scharrelkipfilet is van Franse afkomst en heerlijk mals van smaak. Een veelzijdig stukje vlees waar je eindeloos mee kunt variëren.',
-                'price' => 7,07,
+                'price' => 7.07,
                 'categorie_id' => 2,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -129,7 +129,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050068',
                 'name' => 'AH Goudse jong belegen 48+ stuk',
                 'description' => 'De lekkerste alledaagse Goudse kaas met een milde smaak. Gemaakt van 100% weidemelk.',
-                'price' => 6,74,
+                'price' => 6.74,
                 'categorie_id' => 11, 
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -138,7 +138,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050075',
                 'name' => 'AH Italiaanse mozzarella',
                 'description' => 'Italiaanse mozzarella gemaakt uit 100% koemelk.',
-                'price' => 1,89,
+                'price' => 1.89,
                 'categorie_id' => 11, 
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -147,7 +147,7 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050242',
                 'name' => 'AH Biologisch Jong belegen 50+ stuk',
                 'description' => 'AH biologische kaas wordt gemaakt van de lekkerste biologische koemelk, bereid met vegetarisch stremsel en heeft een mooie volle smaak',
-                'price' => 6,72,
+                'price' => 6.72,
                 'categorie_id' => 11,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -155,29 +155,29 @@ class ProductSeeder extends Seeder
             [
                 'barcode' => '8718452050259',
                 'name' => 'AH Zalmfilet',
-                'description' => 'Verse varkensribbetjes van Albert Heijn.',
+                'description' => 'Zalmfilet gekweekt in Noorwegen bij een gecertificeerde kweker.',
                 'price' => 7.99,
-                'categorie_id' => 4, // Varkensvlees
+                'categorie_id' => 5,
                 'brand_id' => 1,
                 'user_id' => 1,
             ], // ID: 16
             // Snoep
             [
                 'barcode' => '8718452050082',
-                'name' => 'Haribo Gummy Bears',
-                'description' => 'Heerlijke gummy beertjes van Haribo.',
-                'price' => 1.99,
-                'categorie_id' => 17, // Snoep en Snacks
-                'brand_id' => 8, // Haribo
+                'name' => 'AH Wilde zalmfilet',
+                'description' => 'Wilde zalmfilet gevangen in de Stille Oceaan volgens de MSC-standaard.',
+                'price' => 3.39,
+                'categorie_id' => 5,
+                'brand_id' => 1,
                 'user_id' => 1,
             ], // ID: 17
             [
                 'barcode' => '8718452050099',
-                'name' => 'M&M\'s',
-                'description' => 'Heerlijke M&M\'s.',
-                'price' => 2.49,
-                'categorie_id' => 17, // Snoep en Snacks
-                'brand_id' => 9, // M&M's
+                'name' => 'AH Kabeljauwhaasje 2 stuks',
+                'description' => 'De kabeljauw is MSC-gecertificeerd en wordt gevangen in de Barentszzee waar het kabeljauwbestand het goed doet.',
+                'price' => 7.99,
+                'categorie_id' => 5,
+                'brand_id' => 1,
                 'user_id' => 1,
             ], // ID: 18
             [
