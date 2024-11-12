@@ -5,10 +5,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Product;
-use App\Models\Alternative;
-use App\Models\Sustainability;
-use App\Models\Allergen;
-use App\Models\Order;
 
 class ProductSeeder extends Seeder
 {
@@ -18,10 +14,47 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $products = [
-            // Meat Products
+            // Groenten
             [
                 'barcode' => '8718452050013',
-                'name' => 'Albert Heijn Rundvlees',
+                'name' => 'AH Spinazie',
+                'description' => 'Verse spinazie van Albert Heijn.',
+                'price' => 1.99,
+                'categorie_id' => 6, // Bladgroenten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050020',
+                'name' => 'Hak Bloemkool',
+                'description' => 'Verse bloemkool van Hak.',
+                'price' => 2.49,
+                'categorie_id' => 7, // Koolsoorten
+                'brand_id' => 7, // Hak
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050181',
+                'name' => 'AH Broccoli',
+                'description' => 'Verse broccoli van Albert Heijn.',
+                'price' => 1.79,
+                'categorie_id' => 7, // Koolsoorten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050198',
+                'name' => 'AH Wortelen',
+                'description' => 'Verse wortelen van Albert Heijn.',
+                'price' => 1.29,
+                'categorie_id' => 6, // Bladgroenten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            // Vlees
+            [
+                'barcode' => '8718452050037',
+                'name' => 'AH Rundvlees',
                 'description' => 'Vers rundvlees van Albert Heijn.',
                 'price' => 10.99,
                 'categorie_id' => 1, // Rundvlees
@@ -37,118 +70,225 @@ class ProductSeeder extends Seeder
                 'brand_id' => 2, // Jumbo
                 'user_id' => 1,
             ],
-            // Vegetable Products
             [
-                'barcode' => '8718452050020',
-                'name' => 'Bonduelle Spinazie',
-                'description' => 'Verse spinazie van Bonduelle.',
-                'price' => 2.99,
-                'categorie_id' => 6, // Bladgroenten
-                'brand_id' => 6, // Bonduelle
+                'barcode' => '8718452050204',
+                'name' => 'AH Gehakt',
+                'description' => 'Vers gehakt van Albert Heijn.',
+                'price' => 4.99,
+                'categorie_id' => 1, // Rundvlees
+                'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ],
             [
-                'barcode' => '8718452050037',
-                'name' => 'Hak Bloemkool',
-                'description' => 'Verse bloemkool van Hak.',
-                'price' => 3.49,
-                'categorie_id' => 7, // Koolsoorten
-                'brand_id' => 7, // Hak
+                'barcode' => '8718452050211',
+                'name' => 'AH Biefstuk',
+                'description' => 'Verse biefstuk van Albert Heijn.',
+                'price' => 12.99,
+                'categorie_id' => 1, // Rundvlees
+                'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ],
-            // Fruit Products
+            // Vis
             [
                 'barcode' => '8718452050044',
-                'name' => 'Chiquita Bananen',
-                'description' => 'Verse bananen van Chiquita.',
-                'price' => 1.99,
-                'categorie_id' => 13, // Fruit
-                'brand_id' => 11, // Chiquita
+                'name' => 'AH Visfilet',
+                'description' => 'Verse visfilet van Albert Heijn.',
+                'price' => 8.99,
+                'categorie_id' => 3, // Vis
+                'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ],
             [
                 'barcode' => '8718452050051',
-                'name' => 'Pink Lady Appels',
-                'description' => 'Verse appels van Pink Lady.',
-                'price' => 3.99,
-                'categorie_id' => 13, // Fruit
-                'brand_id' => 14, // Pink Lady
+                'name' => 'AH Zalmfilet',
+                'description' => 'Verse zalmfilet van Albert Heijn.',
+                'price' => 12.99,
+                'categorie_id' => 3, // Vis
+                'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ],
-            // Dairy Products
+            [
+                'barcode' => '8718452050228',
+                'name' => 'AH Kabeljauwfilet',
+                'description' => 'Verse kabeljauwfilet van Albert Heijn.',
+                'price' => 14.99,
+                'categorie_id' => 3, // Vis
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050235',
+                'name' => 'AH Tonijnsteak',
+                'description' => 'Verse tonijnsteak van Albert Heijn.',
+                'price' => 16.99,
+                'categorie_id' => 3, // Vis
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            // Varken
             [
                 'barcode' => '8718452050068',
-                'name' => 'Campina Melk',
-                'description' => 'Verse melk van Campina.',
-                'price' => 1.49,
-                'categorie_id' => 11, // Zuivelproducten
-                'brand_id' => 16, // Campina
+                'name' => 'AH Varkenshaas',
+                'description' => 'Verse varkenshaas van Albert Heijn.',
+                'price' => 9.99,
+                'categorie_id' => 4, // Varkensvlees
+                'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ],
             [
                 'barcode' => '8718452050075',
-                'name' => 'Alpro Sojamelk',
-                'description' => 'Veganistische sojamelk van Alpro.',
-                'price' => 2.49,
-                'categorie_id' => 11, // Zuivelproducten
-                'brand_id' => 18, // Alpro
+                'name' => 'AH Speklapjes',
+                'description' => 'Verse speklapjes van Albert Heijn.',
+                'price' => 6.99,
+                'categorie_id' => 4, // Varkensvlees
+                'brand_id' => 1,
                 'user_id' => 1,
             ],
-            // Bread and Bakery Products
+            [
+                'barcode' => '8718452050242',
+                'name' => 'AH Varkensfilet',
+                'description' => 'Verse varkensfilet van Albert Heijn.',
+                'price' => 8.99,
+                'categorie_id' => 4, // Varkensvlees
+                'brand_id' => 1,
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050259',
+                'name' => 'AH Varkensribbetjes',
+                'description' => 'Verse varkensribbetjes van Albert Heijn.',
+                'price' => 7.99,
+                'categorie_id' => 4, // Varkensvlees
+                'brand_id' => 1,
+                'user_id' => 1,
+            ],
+            // Snoep
             [
                 'barcode' => '8718452050082',
-                'name' => 'Bakker Bart Volkorenbrood',
-                'description' => 'Vers volkorenbrood van Bakker Bart.',
-                'price' => 2.99,
-                'categorie_id' => 15, // Bakkerijproducten
-                'brand_id' => 21, // Bakker Bart
+                'name' => 'Haribo Gummy Bears',
+                'description' => 'Heerlijke gummy beertjes van Haribo.',
+                'price' => 1.99,
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 8, // Haribo
                 'user_id' => 1,
             ],
             [
                 'barcode' => '8718452050099',
-                'name' => 'Bolletje Ontbijtkoek',
-                'description' => 'Heerlijke ontbijtkoek van Bolletje.',
-                'price' => 1.99,
-                'categorie_id' => 15, // Bakkerijproducten
-                'brand_id' => 22, // Bolletje
+                'name' => 'M&M\'s',
+                'description' => 'Heerlijke M&M\'s.',
+                'price' => 2.49,
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 9, // M&M's
                 'user_id' => 1,
             ],
-            // Beverage Products
+            [
+                'barcode' => '8718452050266',
+                'name' => 'AH Drop',
+                'description' => 'Heerlijke drop van Albert Heijn.',
+                'price' => 1.49,
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050273',
+                'name' => 'AH Chocolade',
+                'description' => 'Heerlijke chocolade van Albert Heijn.',
+                'price' => 2.49,
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ],
+            // Soepen
             [
                 'barcode' => '8718452050105',
-                'name' => 'Coca-Cola Frisdrank',
-                'description' => 'Verfrissende frisdrank van Coca-Cola.',
-                'price' => 1.49,
-                'categorie_id' => 16, // Dranken
-                'brand_id' => 27, // Coca-Cola
+                'name' => 'Unox Tomatensoep',
+                'description' => 'Heerlijke tomatensoep van Unox.',
+                'price' => 3.49,
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 10, // Unox
                 'user_id' => 1,
             ],
             [
                 'barcode' => '8718452050112',
-                'name' => 'Lipton Ice Tea',
-                'description' => 'Verfrissende ice tea van Lipton.',
-                'price' => 1.99,
-                'categorie_id' => 16, // Dranken
-                'brand_id' => 31, // Lipton
+                'name' => 'Unox Groentesoep',
+                'description' => 'Heerlijke groentesoep van Unox.',
+                'price' => 3.49,
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 10,
                 'user_id' => 1,
             ],
-            // Snack Products
+            [
+                'barcode' => '8718452050280',
+                'name' => 'AH Kippensoep',
+                'description' => 'Heerlijke kippensoep van Albert Heijn.',
+                'price' => 2.99,
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 1,
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050297',
+                'name' => 'AH Erwtensoep',
+                'description' => 'Heerlijke erwtensoep van Albert Heijn.',
+                'price' => 3.49,
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 1,
+                'user_id' => 1,
+            ],
+            // Alternatieve Producten
             [
                 'barcode' => '8718452050129',
-                'name' => 'Lay\'s Paprika Chips',
-                'description' => 'Heerlijke paprika chips van Lay\'s.',
-                'price' => 1.49,
-                'categorie_id' => 17, // Snoep en Snacks
-                'brand_id' => 36, // Lay's
+                'name' => 'AH Biologische Spinazie',
+                'description' => 'Biologische spinazie van Albert Heijn.',
+                'price' => 2.49,
+                'categorie_id' => 6, // Bladgroenten
+                'brand_id' => 1,
                 'user_id' => 1,
             ],
             [
                 'barcode' => '8718452050136',
-                'name' => 'Doritos Nacho Cheese',
-                'description' => 'Heerlijke nacho cheese chips van Doritos.',
-                'price' => 1.99,
+                'name' => 'Vega Kipfilet',
+                'description' => 'Vegetarische kipfilet.',
+                'price' => 4.99,
+                'categorie_id' => 2, // Kip
+                'brand_id' => 12, // VegaMerk
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050143',
+                'name' => 'Eco Zalmfilet',
+                'description' => 'Ecologische zalmfilet.',
+                'price' => 14.99,
+                'categorie_id' => 3, // Vis
+                'brand_id' => 13, // EcoMerk
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050150',
+                'name' => 'Diervriendelijke Varkenshaas',
+                'description' => 'Diervriendelijke varkenshaas.',
+                'price' => 11.99,
+                'categorie_id' => 4, // Varkensvlees
+                'brand_id' => 14, // DiervriendelijkMerk
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050167',
+                'name' => 'Veganistische Gummy Bears',
+                'description' => 'Veganistische gummy beertjes.',
+                'price' => 2.49,
                 'categorie_id' => 17, // Snoep en Snacks
-                'brand_id' => 37, // Doritos
+                'brand_id' => 15, // VeganMerk
+                'user_id' => 1,
+            ],
+            [
+                'barcode' => '8718452050174',
+                'name' => 'Biologische Tomatensoep',
+                'description' => 'Biologische tomatensoep.',
+                'price' => 4.49,
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 16, // BioSoepMerk
                 'user_id' => 1,
             ],
         ];
