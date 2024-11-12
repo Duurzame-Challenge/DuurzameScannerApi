@@ -46,7 +46,7 @@ class Product extends Model
 
     public function alternatives()
     {
-        return $this->belongsToMany(Alternative::class, 'product_alternative');
+        return $this->belongsToMany(Product::class, 'product_alternative', 'product_id', 'alternative_id')->withPivot('reason');
     }
 
     public function orders()

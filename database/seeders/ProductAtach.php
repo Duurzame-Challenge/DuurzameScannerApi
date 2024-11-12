@@ -45,13 +45,13 @@ class ProductAtach extends Seeder
                 }
             }
 
-            // Attach random alternatives, avoiding duplicates
-            $alternatives = Alternative::all()->pluck('id')->except($product->id);
-            foreach ($alternatives as $alternativeId) {
-                if (!$product->alternatives()->wherePivot('alternative_id', $alternativeId)->exists()) {
-                    $product->alternatives()->attach($alternativeId);
-                }
-            }
+            // Remove the random attachment of alternatives
+            // $alternatives = Alternative::all()->pluck('id')->except($product->id);
+            // foreach ($alternatives as $alternativeId) {
+            //     if (!$product->alternatives()->wherePivot('alternative_id', $alternativeId)->exists()) {
+            //         $product->alternatives()->attach($alternativeId);
+            //     }
+            // }
         }
     }
 }
