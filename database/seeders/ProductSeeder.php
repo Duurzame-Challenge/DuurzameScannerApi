@@ -30,6 +30,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Runder Kip burger 2 stuks',
                 'description' => 'Hamburgers gemaakt van mild gekruid rundvlees en kip met een rulle structuur.',
                 'price' => 2.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363936?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 1,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -37,8 +38,9 @@ class ProductSeeder extends Seeder
             [
                 'barcode' => '8718452050181',
                 'name' => 'AH Terra plantaardige burger 2 stuks',
-                'description' => 'Deze luxe plantaardige burger kan niet ontbreken bij de zomerse BBQ! Serveer hem op een broodje met knapperige sla, tomaat en een zoetzure augurk.',
-                'price' => 3.19,
+                'description' => 'Plantaardige burgers gemaakt van veldbonen uit Nederland.',
+                'price' => 2.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130313032343736?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 1,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -48,6 +50,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Jazz appels schaal',
                 'description' => 'Zo’n knapperige, friszoete, sappige appel - dat kan alleen een JAZZ™ appel zijn!',
                 'price' => 3.59,
+                'image' => 'https://static.ah.nl/dam/product/AHI_43545239353936353632?revLabel=8&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -57,6 +60,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Biologisch Royal gala schaal',
                 'description' => 'Royal Gala is een volzoete handappel met een toegankelijke smaak met tonen van nectarine, een echte allemansvriend en biologisch bovendien!',
                 'price' => 2.69,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130313031313931?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -66,6 +70,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Elstar schaal',
                 'description' => 'Elstar is de meest gegeten appel van Nederland, Deze friszoete appel met fijn cassisaroma is een echte alleskunner. ',
                 'price' => 2.19,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130313031373033?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -75,6 +80,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Scharrel kipdijfilet',
                 'description' => 'Deze scharrel kipdijfilet zijn van puur scharrel kippendijvlees waarvan het bot is verwijderd. Deze kipmedaillons zijn ook lekker voor op de barbecue.',
                 'price' => 4.78,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303938303136?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 2,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -84,6 +90,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Franse scharrelkipfilet',
                 'description' => 'De scharrelkipfilet is van Franse afkomst en heerlijk mals van smaak. Een veelzijdig stukje vlees waar je eindeloos mee kunt variëren.',
                 'price' => 7.07,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303938303430?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 2,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -94,6 +101,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Biologisch Kipfilet 2 stuks',
                 'description' => 'Deze malse kipfilet is 100% naturel en daarom geschikt om in veel gerechten te verwerken.',
                 'price' => 8.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303938303335?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 2,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -103,6 +111,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Bananen tros',
                 'description' => 'De banaan is de bekendste tropische fruitsoort en een echte favoriet.',
                 'price' => 1.55,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303537313135?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -112,6 +121,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Biologisch Fairtrade bananen',
                 'description' => 'Het favoriete fruit van Nederland. Deze bananen zijn Fairtrade en biologisch .',
                 'price' => 2.19,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303732383933?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',	
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -121,6 +131,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Conference schaal',
                 'description' => 'Conference is een sappige en veelzijdig peer. ',
                 'price' => 2.19,
+                'image' => 'https://static.ah.nl/dam/product/AHI_43545239383735353736?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -131,6 +142,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Goudse jong belegen 48+ stuk',
                 'description' => 'De lekkerste alledaagse Goudse kaas met een milde smaak. Gemaakt van 100% weidemelk.',
                 'price' => 6.74,
+                'image' => 'https://static.ah.nl/dam/product/AHI_43545239363339303935?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 11,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -140,6 +152,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Italiaanse mozzarella',
                 'description' => 'Italiaanse mozzarella gemaakt uit 100% koemelk.',
                 'price' => 1.89,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303638323839?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 11,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -149,6 +162,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Biologisch Jong belegen 50+ stuk',
                 'description' => 'AH biologische kaas wordt gemaakt van de lekkerste biologische koemelk, bereid met vegetarisch stremsel en heeft een mooie volle smaak',
                 'price' => 6.72,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303132313431?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 11,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -157,7 +171,8 @@ class ProductSeeder extends Seeder
                 'barcode' => '8718452050259',
                 'name' => 'AH Zalmfilet',
                 'description' => 'Zalmfilet gekweekt in Noorwegen bij een gecertificeerde kweker.',
-                'price' => 7.99,
+                'price' => 5.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303938303038?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 5,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -168,6 +183,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Wilde zalmfilet',
                 'description' => 'Wilde zalmfilet gevangen in de Stille Oceaan volgens de MSC-standaard.',
                 'price' => 3.39,
+                'image' => 'https://static.ah.nl/dam/product/AHI_43545239373431313436?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 5,
                 'brand_id' => 1,
                 'user_id' => 1,
@@ -177,6 +193,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Kabeljauwhaasje 2 stuks',
                 'description' => 'De kabeljauw is MSC-gecertificeerd en wordt gevangen in de Barentszzee waar het kabeljauwbestand het goed doet.',
                 'price' => 7.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130313036303831?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 5,
                 'brand_id' => 1,
                 'user_id' => 1,
