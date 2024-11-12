@@ -15,3 +15,4 @@ Route::get('/products-orders', [ProductController::class, 'getProductsOrders']);
 Route::post('/finalize-order', [ProductController::class, 'finalizeOrder']);
 
 Route::get('/orders', [ProductController::class, 'getAllOrders']);
+Route::get('/order/{id}', [ProductController::class, 'getOrderById']);

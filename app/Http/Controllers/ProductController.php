@@ -149,4 +149,16 @@ class ProductController extends Controller
 
         return response()->json($orders);
     }
+
+    // get order by id
+    public function getOrderById($id)
+    {
+        $order = Order::with('products')->find($id);
+
+        if ($order) {
+            return response()->json($order);
+        } else {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+    }
 }
