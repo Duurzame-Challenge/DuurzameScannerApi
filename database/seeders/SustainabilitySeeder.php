@@ -13,29 +13,66 @@ class SustainabilitySeeder extends Seeder
     {
         $sustainabilities = [
             [
-                'label_name' => 'EcoLabel',
+                'label_name' => 'EU Ecolabel',
                 'eco_score' => 'A',
                 'bio_certified' => true,
+                'animal_friendly_score' => '3',
+            ],
+            [
+                'label_name' => 'Fairtrade',
+                'eco_score' => 'B',
+                'bio_certified' => false,
                 'animal_friendly_score' => '2',
             ],
             [
-                'label_name' => 'GreenSeal',
+                'label_name' => 'Rainforest Alliance',
+                'eco_score' => 'A',
+                'bio_certified' => true,
+                'animal_friendly_score' => '4',
+            ],
+            [
+                'label_name' => 'MSC',
+                'eco_score' => 'A',
+                'bio_certified' => false,
+                'animal_friendly_score' => '3',
+            ],
+            [
+                'label_name' => 'UTZ',
                 'eco_score' => 'B',
                 'bio_certified' => false,
-                'animal_friendly_score' => '1',
+                'animal_friendly_score' => '2',
             ],
-            // Add more sample sustainability records as needed
+            [
+                'label_name' => 'Demeter',
+                'eco_score' => 'A',
+                'bio_certified' => true,
+                'animal_friendly_score' => '4',
+            ],
+            [
+                'label_name' => 'EKO',
+                'eco_score' => 'A',
+                'bio_certified' => true,
+                'animal_friendly_score' => '3',
+            ],
+            [
+                'label_name' => 'Beter Leven',
+                'eco_score' => 'B',
+                'bio_certified' => false,
+                'animal_friendly_score' => '4',
+            ],
+            [
+                'label_name' => 'Biologisch',
+                'eco_score' => 'A',
+                'bio_certified' => true,
+                'animal_friendly_score' => '3',
+            ],
+            [
+                'label_name' => 'PlanetProof',
+                'eco_score' => 'B',
+                'bio_certified' => false,
+                'animal_friendly_score' => '2',
+            ],
         ];
-
-        // Add 18 more records to make a total of 20
-        for ($i = 3; $i <= 20; $i++) {
-            $sustainabilities[] = [
-                'label_name' => 'Label' . $i,
-                'eco_score' => chr(64 + ($i % 5) + 1), // Cycles through A-E
-                'bio_certified' => $i % 2 == 0,
-                'animal_friendly_score' => (string)(($i % 4) + 1), // Cycles through 1-4
-            ];
-        }
 
         foreach ($sustainabilities as $sustainabilityData) {
             $sustainability = Sustainability::create($sustainabilityData);
