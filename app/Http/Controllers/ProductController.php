@@ -142,4 +142,11 @@ class ProductController extends Controller
             return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
         }
     }
+
+    public function getAllOrders()
+    {
+        $orders = Order::with('products')->get();
+
+        return response()->json($orders);
+    }
 }
