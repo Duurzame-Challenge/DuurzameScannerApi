@@ -46,7 +46,7 @@ class ProductAtach extends Seeder
             }
 
             // Attach random alternatives, avoiding duplicates
-            $alternatives = Alternative::inRandomOrder()->take(rand(1, 3))->pluck('id');
+            $alternatives = Alternative::all()->pluck('id')->except($product->id);
             foreach ($alternatives as $alternativeId) {
                 if (!$product->alternatives()->wherePivot('alternative_id', $alternativeId)->exists()) {
                     $product->alternatives()->attach($alternativeId);
