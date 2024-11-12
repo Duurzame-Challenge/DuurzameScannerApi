@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Runder Hamburger 2 stuks',
                 'description' => 'Hamburgers gemaakt van mild gekruid rundvlees met een rulle structuur.',
                 'price' => 3.19,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
                 'categorie_id' => 1,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -29,7 +30,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Runder Kip burger 2 stuks',
                 'description' => 'Hamburgers gemaakt van mild gekruid rundvlees en kip met een rulle structuur.',
                 'price' => 2.99,
-                'categorie_id' => 1, 
+                'categorie_id' => 1,
                 'brand_id' => 1,
                 'user_id' => 1,
             ], // ID: 2
@@ -38,7 +39,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Terra plantaardige burger 2 stuks',
                 'description' => 'Deze luxe plantaardige burger kan niet ontbreken bij de zomerse BBQ! Serveer hem op een broodje met knapperige sla, tomaat en een zoetzure augurk.',
                 'price' => 3.19,
-                'categorie_id' => 1, 
+                'categorie_id' => 1,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ], // ID: 3
@@ -47,7 +48,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Jazz appels schaal',
                 'description' => 'Zo’n knapperige, friszoete, sappige appel - dat kan alleen een JAZZ™ appel zijn!',
                 'price' => 3.59,
-                'categorie_id' => 13, 
+                'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ], // ID: 4
@@ -120,7 +121,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Conference schaal',
                 'description' => 'Conference is een sappige en veelzijdig peer. ',
                 'price' => 2.19,
-                'categorie_id' => 13, 
+                'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ], // ID: 12
@@ -130,7 +131,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Goudse jong belegen 48+ stuk',
                 'description' => 'De lekkerste alledaagse Goudse kaas met een milde smaak. Gemaakt van 100% weidemelk.',
                 'price' => 6.74,
-                'categorie_id' => 11, 
+                'categorie_id' => 11,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
             ], // ID: 13
@@ -139,7 +140,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Italiaanse mozzarella',
                 'description' => 'Italiaanse mozzarella gemaakt uit 100% koemelk.',
                 'price' => 1.89,
-                'categorie_id' => 11, 
+                'categorie_id' => 11,
                 'brand_id' => 1,
                 'user_id' => 1,
             ], // ID: 14
