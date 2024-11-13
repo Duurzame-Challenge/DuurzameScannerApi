@@ -121,7 +121,7 @@ class ProductSeeder extends Seeder
                 'name' => 'AH Biologisch Fairtrade bananen',
                 'description' => 'Het favoriete fruit van Nederland. Deze bananen zijn Fairtrade en biologisch .',
                 'price' => 2.19,
-                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303732383933?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',	
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303732383933?revLabel=1&rendition=400x400_JPG_Q85&fileType=binary',
                 'categorie_id' => 13,
                 'brand_id' => 1, // Albert Heijn
                 'user_id' => 1,
@@ -308,6 +308,270 @@ class ProductSeeder extends Seeder
                 'brand_id' => 16, // BioSoepMerk
                 'user_id' => 1,
             ], // ID: 30
+            // New products
+            [
+                'barcode' => '8718452050310',
+                'name' => 'AH Lamskotelet',
+                'description' => 'Lamskotelet van hoge kwaliteit, perfect voor grillen of bakken.',
+                'price' => 12.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 4, // Lamsvlees
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 31
+            [
+                'barcode' => '8718452050327',
+                'name' => 'AH Bloemkool',
+                'description' => 'Verse bloemkool, ideaal voor diverse gerechten.',
+                'price' => 1.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 7, // Koolsoorten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 32
+            [
+                'barcode' => '8718452050334',
+                'name' => 'AH Paprika Mix',
+                'description' => 'Mix van rode, gele en groene paprika\'s, rijk aan vitamines.',
+                'price' => 2.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 8, // Vruchtengroenten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 33
+            [
+                'barcode' => '8718452050341',
+                'name' => 'AH Sinaasappelsap',
+                'description' => 'Versgeperste sinaasappelsap, zonder toegevoegde suikers.',
+                'price' => 2.49,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 34
+            [
+                'barcode' => '8718452050358',
+                'name' => 'AH Chocolade Melk',
+                'description' => 'Heerlijke romige chocolademelk, perfect voor koude dagen.',
+                'price' => 1.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 35
+            [
+                'barcode' => '8718452050365',
+                'name' => 'AH Aardbeien',
+                'description' => 'Verse, sappige aardbeien, perfect voor desserts en salades.',
+                'price' => 3.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 13, // Vruchtengroenten
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 36
+            [
+                'barcode' => '8718452050372',
+                'name' => 'AH Kipfilet',
+                'description' => 'Malse kipfilet, ideaal voor diverse gerechten.',
+                'price' => 5.49,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 2, // Kip
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 37
+            [
+                'barcode' => '8718452050389',
+                'name' => 'AH Zalmfilet',
+                'description' => 'Verse zalmfilet, rijk aan omega-3 vetzuren.',
+                'price' => 7.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 5, // Vis
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 38
+            [
+                'barcode' => '8718452050396',
+                'name' => 'AH Kabeljauwfilet',
+                'description' => 'Verse kabeljauwfilet, perfect voor bakken of grillen.',
+                'price' => 6.99,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 5, // Vis
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 39
+            [
+                'barcode' => '8718452050402',
+                'name' => 'AH Chocolade Reep',
+                'description' => 'Heerlijke melkchocolade reep, perfect als tussendoortje.',
+                'price' => 1.49,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 40
+            [
+                'barcode' => '8718452050419',
+                'name' => 'AH Chips Paprika',
+                'description' => 'Knapperige chips met paprikasmaak, perfect voor feestjes.',
+                'price' => 1.29,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 41
+            [
+                'barcode' => '8718452050419',
+                'name' => 'AH Chips Paprika',
+                'description' => 'Knapperige chips met paprikasmaak, perfect voor feestjes.',
+                'price' => 1.29,
+                'image' => 'https://static.ah.nl/dam/product/AHI_4354523130303936363834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 1, // Albert Heijn
+                'user_id' => 1,
+            ], // ID: 41
+
+            // New products
+            [
+                'barcode' => '8718452050426',
+                'name' => 'Pepsi Cola',
+                'description' => 'Verfrissende Pepsi Cola, perfect voor elke gelegenheid.',
+                'price' => 1.49,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Pepsi+Cola',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 27, // Pepsi
+                'user_id' => 1,
+            ], // ID: 42
+            [
+                'barcode' => '8718452050433',
+                'name' => 'Heineken Bier',
+                'description' => 'Heerlijk verfrissend Heineken bier, perfect voor feestjes.',
+                'price' => 2.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Heineken+Bier',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 28, // Heineken
+                'user_id' => 1,
+            ], // ID: 43
+            [
+                'barcode' => '8718452050440',
+                'name' => 'Spa Blauw',
+                'description' => 'Verfrissend mineraalwater van Spa, perfect voor elke dag.',
+                'price' => 0.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Spa+Blauw',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 29, // Spa
+                'user_id' => 1,
+            ], // ID: 44
+            [
+                'barcode' => '8718452050457',
+                'name' => 'Lipton Ice Tea',
+                'description' => 'Verfrissende Lipton Ice Tea, perfect voor warme dagen.',
+                'price' => 1.79,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Lipton+Ice+Tea',
+                'categorie_id' => 17, // Dranken
+                'brand_id' => 30, // Lipton
+                'user_id' => 1,
+            ], // ID: 45
+            [
+                'barcode' => '8718452050464',
+                'name' => 'Lay\'s Naturel Chips',
+                'description' => 'Heerlijke knapperige Lay\'s chips met een natuurlijke smaak.',
+                'price' => 1.49,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Lay%27s+Naturel+Chips',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 31, // Lay's
+                'user_id' => 1,
+            ], // ID: 46
+            [
+                'barcode' => '8718452050471',
+                'name' => 'Doritos Nacho Cheese',
+                'description' => 'Heerlijke Doritos chips met een nacho cheese smaak.',
+                'price' => 1.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Doritos+Nacho+Cheese',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 32, // Doritos
+                'user_id' => 1,
+            ], // ID: 47
+            [
+                'barcode' => '8718452050488',
+                'name' => 'Calvé Pindakaas',
+                'description' => 'Heerlijke romige Calvé pindakaas, perfect voor op brood.',
+                'price' => 2.49,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Calv%C3%A9+Pindakaas',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 33, // Calvé
+                'user_id' => 1,
+            ], // ID: 48
+            [
+                'barcode' => '8718452050495',
+                'name' => 'Unox Rookworst',
+                'description' => 'Heerlijke Unox rookworst, perfect voor stamppot.',
+                'price' => 3.49,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Unox+Rookworst',
+                'categorie_id' => 1, // Vlees
+                'brand_id' => 34, // Unox
+                'user_id' => 1,
+            ], // ID: 49
+            [
+                'barcode' => '8718452050501',
+                'name' => 'M&M\'s Pinda',
+                'description' => 'Heerlijke M&M\'s met een knapperige pindavulling.',
+                'price' => 2.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=M%26M%27s+Pinda',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 35, // M&M's
+                'user_id' => 1,
+            ], // ID: 50
+            [
+                'barcode' => '8718452050518',
+                'name' => 'Knorr Wereldgerechten',
+                'description' => 'Heerlijke Knorr wereldgerechten, makkelijk te bereiden.',
+                'price' => 4.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Knorr+Wereldgerechten',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 36, // Knorr
+                'user_id' => 1,
+            ], // ID: 51
+            [
+                'barcode' => '8718452050525',
+                'name' => 'Maggi Bouillonblokjes',
+                'description' => 'Heerlijke Maggi bouillonblokjes, perfect voor soepen en sauzen.',
+                'price' => 1.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Maggi+Bouillonblokjes',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 37, // Maggi
+                'user_id' => 1,
+            ], // ID: 52
+            [
+                'barcode' => '8718452050532',
+                'name' => 'Honig Soepmix',
+                'description' => 'Heerlijke Honig soepmix, makkelijk te bereiden.',
+                'price' => 2.49,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Honig+Soepmix',
+                'categorie_id' => 18, // Soepen
+                'brand_id' => 38, // Honig
+                'user_id' => 1,
+            ], // ID: 53
+            [
+                'barcode' => '8718452050549',
+                'name' => 'Conimex Woksaus',
+                'description' => 'Heerlijke Conimex woksaus, perfect voor Aziatische gerechten.',
+                'price' => 2.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Conimex+Woksaus',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 39, // Conimex
+                'user_id' => 1,
+            ], // ID: 54
+            [
+                'barcode' => '8718452050556',
+                'name' => 'Blue Band Margarine',
+                'description' => 'Heerlijke romige Blue Band margarine, perfect voor bakken en braden.',
+                'price' => 1.99,
+                'image' => 'https://via.placeholder.com/800x800.png?text=Blue+Band+Margarine',
+                'categorie_id' => 17, // Snoep en Snacks
+                'brand_id' => 40, // Blue Band
+                'user_id' => 1,
+            ], // ID: 55
+
         ];
 
         foreach ($products as $productData) {
