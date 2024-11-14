@@ -5,7 +5,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Sustainability;
-use App\Models\Product;
 
 class SustainabilitySeeder extends Seeder
 {
@@ -48,7 +47,6 @@ class SustainabilitySeeder extends Seeder
                 'bio_certified' => true,
                 'animal_friendly_score' => '4',
             ],
-            // test
             [
                 'label_name' => 'EKO',
                 'eco_score' => 'A',
@@ -56,19 +54,19 @@ class SustainabilitySeeder extends Seeder
                 'animal_friendly_score' => '3',
             ],
             [
-                'label_name' => 'Beter Leven',
-                'eco_score' => 'B',
-                'bio_certified' => false,
-                'animal_friendly_score' => '4',
-            ],
-            [
                 'label_name' => 'Biologisch',
                 'eco_score' => 'A',
                 'bio_certified' => true,
+                'animal_friendly_score' => '4',
+            ],
+            [
+                'label_name' => 'Milieukeur',
+                'eco_score' => 'B',
+                'bio_certified' => false,
                 'animal_friendly_score' => '3',
             ],
             [
-                'label_name' => 'PlanetProof',
+                'label_name' => 'Beter Leven',
                 'eco_score' => 'B',
                 'bio_certified' => false,
                 'animal_friendly_score' => '2',
@@ -76,11 +74,7 @@ class SustainabilitySeeder extends Seeder
         ];
 
         foreach ($sustainabilities as $sustainabilityData) {
-            $sustainability = Sustainability::create($sustainabilityData);
-
-            // Associate sustainabilities with random products
-            $products = Product::inRandomOrder()->take(rand(1, 3))->pluck('id');
-            $sustainability->products()->attach($products);
+            Sustainability::create($sustainabilityData);
         }
     }
 }
