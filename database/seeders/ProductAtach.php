@@ -22,61 +22,72 @@ class ProductAtach extends Seeder
         foreach ($products as $product) {
             // Specificeer de duurzaamheidsscores voor elk product
             $productSustainabilities = [
-                1 => [1, 2],
-                2 => [2, 3],
-                3 => [1, 3],
-                4 => [4],
-                5 => [5],
-                6 => [6, 10],
-                7 => [7],
-                8 => [8],
-                9 => [9],
-                10 => [10],
-                11 => [1, 4],
-                12 => [2, 5],
-                14 => [7, 8],
-                15 => [9, 10, 2],
-                17 => [3, 4],
-                18 => [5, 6],
-                19 => [7, 8],
-                20 => [9, 10],
-                21 => [1, 5],
-                23 => [5, 7],
-                24 => [6, 8],
-                25 => [9, 1],
-                28 => [6, 7],
-                29 => [8, 9],
-                30 => [10, 1],
-                32 => [4, 5],
-                33 => [6, 7],
-                34 => [8, 9],
-                35 => [10, 1],
-                36 => [2, 3],
-                37 => [4, 5],
-                38 => [6, 7],
-                39 => [8, 9],
-                40 => [10, 1],
-                41 => [2, 3],
-                42 => [4, 5],
-                43 => [6, 7],
-                44 => [8, 9],
-                45 => [10, 1],
-                46 => [2, 3],
-                47 => [4, 5],
-                48 => [6, 7],
-                49 => [8, 9],
-                50 => [10, 1],
-                51 => [2, 3],
-                52 => [4, 5],
-                53 => [6, 7],
-                54 => [8, 9],
-                55 => [10, 1],
-                56 => [2, 3],
-                57 => [4, 5],
-                58 => [6, 7],
-                59 => [8, 9],
-                60 => [10, 1],
+                1 => [1, 2], // AH Runder Hamburger 2 stuks - Duurzaam
+                2 => [2], // AH Runder Kip burger 2 stuks - Duurzaam
+                3 => [1, 3], // AH Terra plantaardige burger 2 stuks - Duurzaam
+                4 => [], // Jazz appels schaal - Duurzaam
+                5 => [5], // AH Biologisch Royal gala schaal - Duurzaam
+                6 => [6, 10, 4], // AH Elstar schaal - Duurzaam
+                7 => [], // AH Scharrel kipdijfilet - Duurzaam
+                8 => [8], // AH Franse scharrelkipfilet - Duurzaam
+                9 => [9], // AH Biologisch Kipfilet 2 stuks - Duurzaam
+                10 => [], // AH Bananen tros - Duurzaam
+                11 => [1, 4], // AH Biologisch Fairtrade bananen - Duurzaam
+                12 => [2, 5], // AH Conference schaal - Duurzaam
+                14 => [7, 8], // AH Goudse jong belegen 48+ stuk - Duurzaam
+                15 => [9, 10, 2], // AH Italiaanse mozzarella - Duurzaam
+                17 => [], // AH Zalmfilet - Duurzaam
+                18 => [5], // AH Wilde zalmfilet - Duurzaam
+                19 => [7, 8], // AH Kabeljauwhaasje 2 stuks - Duurzaam
+                20 => [9, 10], // AH Drop - Duurzaam
+                21 => [1, 5, 2, 6], // AH Chocolade - Duurzaam
+                23 => [], // Unox Tomatensoep - Duurzaam
+                24 => [6, 8], // Unox Groentesoep - Duurzaam
+                25 => [9, 1], // AH Kippensoep - Duurzaam
+                28 => [], // AH Erwtensoep - Duurzaam
+                29 => [8, 9], // AH Biologische Spinazie - Duurzaam
+                30 => [10, 1], // Vega Kipfilet - Duurzaam
+                32 => [4, 5], // Eco Zalmfilet - Duurzaam
+                33 => [6, 7], // Diervriendelijke Varkenshaas - Duurzaam
+                34 => [8, 9], // Veganistische Gummy Bears - Duurzaam
+                35 => [10, 1], // Biologische Tomatensoep - Duurzaam
+                36 => [2, 3], // AH Lamskotelet - Duurzaam
+                37 => [4, 5], // AH Bloemkool - Duurzaam
+                38 => [6, 7], // AH Paprika Mix - Duurzaam
+                39 => [8, 9], // AH Sinaasappelsap - Duurzaam
+                40 => [10, 1], // AH Chocolade Melk - Duurzaam
+                41 => [2, 3], // AH Aardbeien - Duurzaam
+                42 => [4, 5], // AH Kipfilet - Duurzaam
+                43 => [6, 7], // AH Zalmfilet - Duurzaam
+                44 => [8, 9], // AH Kabeljauwfilet - Duurzaam
+                45 => [10, 1], // AH Chocolade Reep - Duurzaam
+                46 => [], // AH Chips Paprika - Duurzaam
+                47 => [4, 5], // Pepsi Cola - Duurzaam
+                48 => [6, 7], // Heineken Bier - Duurzaam
+                49 => [8, 9], // Spa Blauw - Duurzaam
+                50 => [10, 1], // Lipton Ice Tea - Duurzaam
+                51 => [2, 3], // Lay's Naturel Chips - Duurzaam
+                52 => [4, 5], // Doritos Nacho Cheese - Duurzaam
+                53 => [6, 7], // Calvé Pindakaas - Duurzaam
+                54 => [8, 9], // Unox Rookworst - Duurzaam
+                55 => [10, 1], // M&M's Pinda - Duurzaam
+                56 => [], // Niet duurzaam
+                57 => [], // Niet duurzaam
+                58 => [], // Niet duurzaam
+                59 => [], // Niet duurzaam
+                60 => [], // Niet duurzaam
             ];
+
+            foreach ($productSustainabilities as $productId => $sustainabilityIds) {
+                $product = Product::find($productId);
+                if ($product) {
+                    foreach ($sustainabilityIds as $sustainabilityId) {
+                        if (!$product->sustainabilities()->wherePivot('sustainability_id', $sustainabilityId)->exists()) {
+                            $product->sustainabilities()->attach($sustainabilityId);
+                        }
+                    }
+                }
+            }
 
             $productAllergens = [
                 1 => [5], // AH Runder Hamburger 2 stuks - Wheat
