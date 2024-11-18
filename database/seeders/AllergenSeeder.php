@@ -13,16 +13,21 @@ class AllergenSeeder extends Seeder
     public function run(): void
     {
         $allergens = [
-            ['name' => 'Peanuts', 'description' => 'Peanuts can cause severe allergic reactions.'],
-            ['name' => 'Tree Nuts', 'description' => 'Tree nuts include almonds, walnuts, and cashews.'],
-            ['name' => 'Milk', 'description' => 'Milk allergy is a reaction to proteins found in cow\'s milk.'],
-            ['name' => 'Eggs', 'description' => 'Egg allergy is a reaction to proteins found in eggs.'],
-            ['name' => 'Wheat', 'description' => 'Wheat allergy is a reaction to proteins found in wheat.'],
-            ['name' => 'Soy', 'description' => 'Soy allergy is a reaction to proteins found in soybeans.'],
-            ['name' => 'Fish', 'description' => 'Fish allergy is a reaction to proteins found in fish.'],
-            ['name' => 'Shellfish', 'description' => 'Shellfish allergy is a reaction to proteins found in shellfish.'],
-            ['name' => 'Sesame', 'description' => 'Sesame allergy is a reaction to proteins found in sesame seeds.'],
-            ['name' => 'Mustard', 'description' => 'Mustard allergy is a reaction to proteins found in mustard seeds.'],
+            ['name' => 'Pinda', 'description' => 'Pindas kunnen ernstige allergische reacties veroorzaken.'],
+            ['name' => 'Noten', 'description' => 'Noten omvatten amandelen, walnoten en cashewnoten.'],
+            ['name' => 'Melk', 'description' => 'Melkallergie is een reactie op eiwitten in koemelk.'],
+            ['name' => 'Eieren', 'description' => 'Eiallergie is een reactie op eiwitten in eieren.'],
+            ['name' => 'Tarwe', 'description' => 'Tarweallergie is een reactie op eiwitten in tarwe.'],
+            ['name' => 'Soja', 'description' => 'Soja-allergie is een reactie op eiwitten in sojabonen.'],
+            ['name' => 'Vis', 'description' => 'Visallergie is een reactie op eiwitten in vis.'],
+            ['name' => 'Schaaldieren', 'description' => 'Schaaldierenallergie is een reactie op eiwitten in schaaldieren.'],
+            ['name' => 'Sesam', 'description' => 'Sesamallergie is een reactie op eiwitten in sesamzaad.'],
+            ['name' => 'Mosterd', 'description' => 'Mosterdallergie is een reactie op eiwitten in mosterdzaad.'],
+            ['name' => 'Selderij', 'description' => 'Selderijallergie is een reactie op eiwitten in selderij.'],
+            ['name' => 'Lupine', 'description' => 'Lupine-allergie is een reactie op eiwitten in lupinezaad.'],
+            ['name' => 'Weekdieren', 'description' => 'Weekdierenallergie is een reactie op eiwitten in weekdieren.'],
+            ['name' => 'Sulfieten', 'description' => 'Sulfieten kunnen allergische reacties veroorzaken bij gevoelige personen.'],
+            ['name' => 'Gluten', 'description' => 'Glutenallergie is een reactie op eiwitten in tarwe, gerst en rogge.'],
         ];
 
         foreach ($allergens as $allergen) {
