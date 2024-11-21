@@ -123,7 +123,9 @@ public function getProductByBarcode(Request $request)
 }
     
 ```
-Get All Products Orders
+
+### Get All Products Orders
+This endpoint allows you to retrieve a list of all products orders along with the product, category, brand, and user details.
 URL: /api/products-orders
 Method: GET
 Response:
@@ -143,7 +145,8 @@ public function getProductsOrders()
     return response()->json($productsOrders);
 }
 ```
-Finalize Order
+### Finalize Order
+This endpoint allows you to finalize an order by summing up the total price of all products in the products_order table, creating a new order, attaching products to the order, concatenating product names, updating the order with the concatenated product names, discarding all data from the products_order table, and returning the finalized order.
 URL: /api/finalize-order
 Method: POST
 Response:
@@ -200,55 +203,8 @@ public function finalizeOrder(Request $request)
 }
 ```
 
-``` php
-<?php
-public function finalizeOrder(Request $request)
-{
-    try {
-        // Check if there are any products in the products_order table
-        $firstProductOrder = ProductsOrder::first();
-        if (!$firstProductOrder) {
-            return response()->json(['message' => 'No products in the order to finalize'], 400);
-        }
-
-        // Sum up the total price of all products in the products_order table
-        $total = ProductsOrder::sum('price');
-
-        // Get the user_id from the first product order (assuming all products belong to the same user)
-        $user_id = $firstProductOrder->user_id;
-
-        // Create a new order
-        $order = Order::create([
-            'user_id' => $user_id,
-            'total' => $total,
-            'status' => 'completed',
-        ]);
-
-        // Attach products to the order
-        $productsOrders = ProductsOrder::all();
-        foreach ($productsOrders as $productsOrder) {
-            $order->products()->attach($productsOrder->product_id);
-        }
-
-        // Concatenate product names
-        $productNames = $productsOrders->pluck('name')->implode(', ');
-
-        // Update the order with the concatenated product names
-        $order->update(['product_names' => $productNames]);
-
-        // Discard all data from the products_order table
-        ProductsOrder::truncate();
-
-        // Reload the order to include the products relationship
-        $order->load('products');
-
-        return response()->json(['message' => 'Order finalized successfully', 'order' => $order, 'product_names' => $order->product_names]);
-    } catch (\Exception $e) {
-        return response()->json(['message' => 'An error occurred', 'error' => $e->getMessage()], 500);
-    }
-}
-```
-Get All Orders
+## Get All Orders
+This endpoint allows you to retrieve a list of all orders along with the products in each order.
 URL: /api/orders
 Method: GET
 Response:
@@ -262,7 +218,8 @@ public function getAllOrders()
     return response()->json($orders);
 }
 ```
-Get Order by ID
+## Get Order by ID
+This endpoint retrieves the details of a specific order by its ID, including related products.
 URL: /api/order/{id}
 Method: GET
 Response:
@@ -283,7 +240,9 @@ public function getOrderById($id)
 ```
 
 
-Get Sustainabilities for a Product
+## Get Sustainabilities for a Product
+This endpoint allows you to retrieve a list of sustainabilities for a specific product.
+
 URL: /api/product/{id}/sustainabilities
 Method: GET
 Response:
@@ -306,7 +265,8 @@ public function getSustainabilities($id)
     }
 }
 ```
-Get Allergens for a Product
+## Get Allergens for a Product
+This endpoint allows you to retrieve a list of allergens for a specific product.
 URL: /api/product/{id}/allergens
 Method: GET
 Response:
@@ -329,7 +289,9 @@ public function getAllergens($id)
     }
 }
 ```
-Get Alternatives for a Product
+## Get Alternatives for a Product
+This endpoint allows you to retrieve a list of alternatives for a specific product.
+
 URL: /api/product/{id}/alternatives
 Method: GET
 Response:
@@ -356,7 +318,8 @@ public function getAlternatives($id)
 ### migrations
 Migrations are used to create the database schema. Here are some examples:
 
-Create Products Table:
+## Create Products Table:
+This migration creates the products table with columns for barcode, name, description, price, image, category ID, brand ID, user ID, and timestamps.
 ``` php
 <?php
 Schema::create('products', function (Blueprint $table) {
@@ -372,7 +335,8 @@ Schema::create('products', function (Blueprint $table) {
     $table->timestamps();
 });
 ```
-Create Product Allergen Pivot Table:
+## Create Product Allergen Pivot Table:
+This migration creates the product_allergen pivot table to establish a many-to-many relationship between products and allergens.
 ``` php
 
 <?php
@@ -383,10 +347,11 @@ Schema::create('product_allergen', function (Blueprint $table) {
 });
 ```
 
-### Seeders
+## Seeders
 Seeders are used to populate the database with initial data. Here are some examples:
 
-Product Seeder:
+### Product Seeder:
+This seeder populates the products table with initial data for products, including barcode, name, description, price, image, category ID, brand ID, and user ID.
 ``` php
 <?php
 $products = [
@@ -407,7 +372,8 @@ foreach ($products as $productData) {
     Product::create($productData);
 }
 ```
-Product Attach Seeder:
+### Product Attach Seeder:
+This seeder attaches allergens to products using the product_allergen pivot table.
 ``` php
 <?php
 $productAllergens = [
@@ -427,7 +393,8 @@ foreach ($productAllergens as $productId => $allergenIds) {
     }
 }
 ```
-Product Attach Seeder:
+### Product Attach Seeder:
+This seeder attaches allergens to products using the product_allergen pivot table.
 ``` php
 <?php
 $productAllergens = [
@@ -449,8 +416,8 @@ foreach ($productAllergens as $productId => $allergenIds) {
 ```
 ## Models and Relationships
 
-Product Model
-
+### Product Model
+The Product model defines the relationships between products and users, categories, brands, sustainabilities, allergens, alternatives, and orders.
 ``` php
 <?php
 class Product extends Model
@@ -504,7 +471,8 @@ class Product extends Model
 }
 ```
 
-ProductsOrder Model
+### ProductsOrder Model
+The ProductsOrder model defines the relationships between products orders and products, categories, brands, and users.
 ``` php	
 <?php
 class ProductsOrder extends Model
@@ -546,7 +514,8 @@ class ProductsOrder extends Model
 }
 ```
 
-##env file
+## env file
+
 ``` php
 APP_NAME=DuurzameScanner
 APP_ENV=local
