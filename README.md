@@ -6,61 +6,136 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Duurzame Scanner
 
-## About Laravel
+## Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Duurzame Scanner is a web application designed to scan products and retrieve detailed information about their sustainability, allergens, alternatives, and more. The application uses Laravel for the backend and integrates with Pusher for real-time updates.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Scan products by barcode
+- Retrieve product details including user, category, brand, sustainabilities, allergens, and alternatives
+- Real-time updates using Pusher
+- API endpoints for product management
+- Database seeding for initial data setup
 
-## Learning Laravel
+## Getting Started
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Prerequisites
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP ^8.2
+- Composer
+- Node.js
+- MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Installation
 
-## Laravel Sponsors
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-repo/duurzame-scanner.git
+    cd duurzame-scanner
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Install dependencies:
+    ```sh
+    composer install
+    npm install
+    ```
 
-### Premium Partners
+3. Copy the `.env.example` file to `.env` and configure your environment variables:
+    ```sh
+    cp .env.example .env
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. Generate an application key:
+    ```sh
+    php artisan key:generate
+    ```
 
-## Contributing
+5. Run migrations and seed the database:
+    ```sh
+    php artisan migrate --seed
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Start the development server:
+    ```sh
+    php artisan serve
+    npm run dev
+    ```
 
-## Code of Conduct
+## Usage
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### API Endpoints
 
-## Security Vulnerabilities
+#### Get Product by Barcode
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **URL:** `/api/product-by-barcode`
+- **Method:** `POST`
+- **Parameters:**
+  - `barcode` (string, required): The barcode of the product to retrieve.
+- **Response:**
+  - 200: Product details
+  - 404: Product not found
+  - 500: An error occurred
 
-## License
+#### Get All Products Orders
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **URL:** `/api/products-orders`
+- **Method:** `GET`
+- **Response:**
+  - 200: List of products orders
+
+### Real-time Updates
+
+The application uses Pusher for real-time updates. When a product is scanned, the details are broadcasted to the `products-orders` channel.
+
+### Frontend Example
+
+Create a separate HTML file (e.g., `scanned-product.html`) to display scanned product details in real-time:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanned Product</title>
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script>
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher("your-app-key", {
+            cluster: "your-app-cluster",
+        });
+
+        var channel = pusher.subscribe("products-orders");
+        channel.bind("App\\Events\\ProductScanned", function (data) {
+            // Update the UI with the scanned product information
+            document.getElementById("product-info").innerText = JSON.stringify(data.productOrder, null, 2);
+        });
+
+        // Function to fetch the latest scanned product
+        async function fetchLatestScannedProduct() {
+            try {
+                const response = await fetch('/api/products-orders');
+                const productsOrders = await response.json();
+                if (productsOrders.length > 0) {
+                    const latestProductOrder = productsOrders[productsOrders.length - 1];
+                    document.getElementById("product-info").innerText = JSON.stringify(latestProductOrder, null, 2);
+                }
+            } catch (error) {
+                console.error('Error fetching the latest scanned product:', error);
+            }
+        }
+
+        // Fetch the latest scanned product on page load
+        window.onload = fetchLatestScannedProduct;
+    </script>
+</head>
+<body>
+    <h1>Scanned Product</h1>
+    <pre id="product-info">Waiting for scanned product...</pre>
+</body>
+</html>
